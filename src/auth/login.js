@@ -12,14 +12,11 @@ export function Login() {
   const users = useSelector((state) => state.auth.users);
   const history = useHistory();
   useEffect(() => {
-    if (user.login == users[0].login) {
-      setDisable(false);
+    const currUser = users[0];
+    if (user.login === currUser.login && user.password === currUser.password) {
+      return setDisable(false);
     }
-    if (user.password == users[0].password) {
-      setDisable(false);
-    } else {
-      setDisable(true);
-    }
+    return setDisable(true);
   }, [user]);
 
   const send = (e) => {
