@@ -51,6 +51,7 @@
 }
 
 .disableBtn {
+  pointer-events: none !important;
   cursor: not-allowed !important;
   transition: 0.5s ease-in-out;
   background: #1aad98 !important;

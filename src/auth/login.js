@@ -17,6 +17,7 @@ export function Login() {
       return setDisable(false);
     }
     return setDisable(true);
+    // Frontend-разработчик React
   }, [user]);
 
   const send = (e) => {
